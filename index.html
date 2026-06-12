@@ -1,0 +1,2471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0a0806">
+
+<!-- ═══ SEO BÁSICO ═══ -->
+<title>Método StrengthLab — Tu guía de nutrición personalizada</title>
+<meta name="description" content="Respondé 8 preguntas y recibí una guía nutricional construida sobre tu perfil real. Nutrición de alto rendimiento por Renzo Bello · StrengthLab.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://metodo.strengthlab.com/">
+
+<!-- ═══ OPEN GRAPH (compartir en redes) ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://metodo.strengthlab.com/">
+<meta property="og:title" content="Método StrengthLab — Tu guía de nutrición personalizada">
+<meta property="og:description" content="Respondé 8 preguntas y recibí una guía nutricional construida sobre tu perfil real. Por Renzo Bello · StrengthLab.">
+<meta property="og:image" content="https://metodo.strengthlab.com/og-image.jpg">
+<meta property="og:locale" content="es_AR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Método StrengthLab — Tu guía nutricional personalizada">
+<meta name="twitter:description" content="Respondé 8 preguntas y recibí una guía nutricional construida sobre tu perfil real.">
+
+<!-- ═══ SCHEMA MARKUP ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Método StrengthLab",
+  "description": "Guía de nutrición personalizada basada en tu perfil real.",
+  "applicationCategory": "HealthApplication",
+  "author": {
+    "@type": "Person",
+    "name": "Renzo Bello",
+    "sameAs": "https://www.instagram.com/reennzolifts"
+  }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink:       #0a0806;
+  --ink2:      #141109;
+  --ink3:      #1c1710;
+  --gold:      #c9a96e;
+  --gold2:     #a8843e;
+  --gold3:     #e8c98a;
+  --gold-pale: rgba(201,169,110,0.08);
+  --gold-mid:  rgba(201,169,110,0.15);
+  --text:      #f2ece0;
+  --text-mid:  #b8ad9a;
+  --text-dim:  #5e5649;
+  --border:    rgba(201,169,110,0.20);
+  --border2:   rgba(201,169,110,0.07);
+  --border3:   rgba(201,169,110,0.04);
+  --serif:     'Cormorant Garamond', Georgia, serif;
+  --sans:      'Montserrat', sans-serif;
+  --display:   'Playfair Display', Georgia, serif;
+  --safe-top:    env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --red:   #e05252;
+  --green: #4caf8a;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--sans);
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* GRAIN */
+body::before {
+  content:'';
+  position:fixed; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.028'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:9998;
+}
+
+/* ══════════════════════
+   WATERMARK
+══════════════════════ */
+.watermark {
+  position: fixed;
+  bottom: calc(.875rem + var(--safe-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9997;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+  pointer-events: none;
+  user-select: none;
+}
+.wm-brand {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: rgba(201,169,110,0.72);
+}
+.wm-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .72rem;
+  letter-spacing: .14em;
+  color: rgba(201,169,110,0.5);
+}
+
+/* ══════════════════════
+   LANDING
+══════════════════════ */
+#landing {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+#landing::before {
+  content:'';
+  position:absolute;
+  width:600px; height:600px;
+  background:radial-gradient(ellipse at center,rgba(201,169,110,0.06) 0%,transparent 68%);
+  top:38%; left:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.landing-frame {
+  position: absolute;
+  inset: 14px;
+  border: 1px solid var(--border2);
+  pointer-events: none;
+}
+.landing-nav {
+  padding: calc(1.5rem + var(--safe-top)) 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; z-index: 1;
+  animation: fadeIn .7s ease both;
+}
+.nav-logo {
+  font-family: var(--sans);
+  font-weight: 800;
+  font-size: .72rem;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--gold);
+  line-height: 1;
+}
+.nav-logo small {
+  display: block;
+  font-size: .58rem;
+  letter-spacing: .18em;
+  color: var(--text-dim);
+  font-weight: 400;
+  margin-top: .3rem;
+}
+
+/* ── SOCIAL PROOF BANNER ── */
+.social-proof-bar {
+  position: relative; z-index: 1;
+  margin: 1.5rem 1.5rem 0;
+  padding: .7rem 1rem;
+  border: 1px solid var(--border2);
+  background: var(--gold-pale);
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+  animation: fadeIn .9s ease .1s both;
+}
+.sp-avatars {
+  display: flex;
+  flex-shrink: 0;
+}
+.sp-avatar {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink);
+  background: var(--ink3);
+  display: flex; align-items: center; justify-content: center;
+  font-size: .55rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0;
+  margin-left: -6px;
+}
+.sp-avatar:first-child { margin-left: 0; }
+.sp-text {
+  font-family: var(--serif);
+  font-size: .82rem;
+  font-style: italic;
+  color: var(--text-mid);
+  line-height: 1.4;
+}
+.sp-text strong {
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--gold3);
+  letter-spacing: .04em;
+}
+.sp-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+@keyframes pulse-dot {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .5; transform: scale(.7); }
+}
+
+.landing-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem 1.5rem;
+  position: relative; z-index: 1;
+}
+.eyebrow {
+  font-size: .72rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 2rem;
+  animation: fadeIn .9s ease .15s both;
+}
+.hero-h1 {
+  font-family: var(--display);
+  font-size: clamp(3.2rem, 15vw, 5.8rem);
+  font-weight: 700;
+  line-height: .86;
+  letter-spacing: -.03em;
+  margin-bottom: 1.75rem;
+  animation: fadeUp .8s ease .25s both;
+}
+.hero-h1 em { font-style: italic; color: var(--gold); }
+.hero-divider {
+  display: flex; align-items: center; gap: 1rem;
+  margin-bottom: 1.5rem;
+  animation: fadeIn .8s ease .4s both;
+  width: 100%;
+  max-width: 300px;
+}
+.hero-divider span { flex:1; height:1px; background:var(--border2); }
+.hero-divider i {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .72rem;
+  color: var(--text-dim);
+  letter-spacing: .06em;
+  white-space: nowrap;
+}
+.hero-p {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--text-mid);
+  line-height: 1.8;
+  max-width: 280px;
+  margin-bottom: 2.75rem;
+  font-style: italic;
+  animation: fadeIn .9s ease .5s both;
+}
+.cta-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 290px;
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-family: var(--sans);
+  font-size: .58rem;
+  font-weight: 700;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  padding: 1.15rem 2rem;
+  cursor: pointer;
+  transition: background .35s, color .35s;
+  -webkit-appearance: none;
+  animation: fadeIn .9s ease .65s both;
+  min-height: 54px;
+}
+.cta-btn:active { background: var(--gold); color: var(--ink); }
+@media (hover:hover) { .cta-btn:hover { background: var(--gold); color: var(--ink); } }
+.cta-btn svg { width:12px; height:12px; flex-shrink:0; }
+
+/* Credenciales bajo CTA */
+.landing-creds {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+  animation: fadeIn 1s ease .8s both;
+}
+.cred-item {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .6rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.cred-item svg { width: 12px; height: 12px; color: var(--gold); flex-shrink: 0; }
+.cred-sep { width: 3px; height: 3px; border-radius: 50%; background: var(--border); }
+
+.sl-brand-mark {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .3rem;
+  pointer-events: none;
+  user-select: none;
+  animation: fadeIn 1s ease 1s both;
+}
+.sl-monogram {
+  font-family: var(--display);
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-style: italic;
+  color: var(--gold);
+  opacity: .18;
+  line-height: 1;
+  letter-spacing: -.04em;
+}
+.sl-sub {
+  font-family: var(--sans);
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .32em;
+  text-transform: uppercase;
+  color: rgba(201,169,110,0.4);
+}
+.sl-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .6rem;
+  letter-spacing: .14em;
+  color: rgba(201,169,110,0.3);
+}
+
+/* ══════════════════════
+   QUIZ
+══════════════════════ */
+#quiz { display:none; min-height:100vh; min-height:100dvh; position:relative; }
+.quiz-frame {
+  position: fixed; inset: 14px;
+  border: 1px solid var(--border2);
+  pointer-events: none; z-index: 0;
+}
+.quiz-topbar {
+  position: fixed; top:0; left:0; right:0;
+  z-index: 10;
+  padding: calc(1.25rem + var(--safe-top)) 1.25rem 1.25rem;
+  display: flex; align-items: center; gap: 1.25rem;
+  background: linear-gradient(to bottom,var(--ink) 60%,transparent);
+}
+.quiz-logo {
+  font-family: var(--sans);
+  font-size: .68rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.progress-track {
+  flex:1; height:1px;
+  background:var(--border2);
+  position:relative;
+  overflow: visible;
+}
+.progress-track::after {
+  content:'';
+  position:absolute; left:0; top:0; bottom:0;
+  background:var(--gold);
+  width:var(--pct,0%);
+  transition:width .6s cubic-bezier(.4,0,.2,1);
+}
+/* Porcentaje flotante sobre la barra */
+.progress-label {
+  position: absolute;
+  top: -18px;
+  left: var(--pct, 0%);
+  transform: translateX(-50%);
+  font-size: .55rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--gold);
+  transition: left .6s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
+}
+.q-counter {
+  font-size:.65rem; letter-spacing:.14em;
+  color:var(--text-dim); flex-shrink:0;
+}
+.quiz-stage {
+  min-height:100vh; min-height:100dvh;
+  display:flex; align-items:flex-start;
+  padding: calc(5.5rem + var(--safe-top)) 1.25rem calc(2rem + var(--safe-bottom)) 1.25rem;
+  position:relative; z-index:1;
+}
+.quiz-inner {
+  width:100%;
+  animation: fadeUp .35s cubic-bezier(.4,0,.2,1);
+}
+.q-eyebrow {
+  font-size:.65rem; letter-spacing:.24em;
+  text-transform:uppercase; color:var(--gold);
+  font-weight:700; margin-bottom:1.1rem;
+  display:flex; align-items:center; gap:.875rem;
+}
+.q-eyebrow::after { content:''; flex:1; height:1px; background:var(--border2); }
+.q-headline {
+  font-family:var(--display);
+  font-size:clamp(1.75rem,7.5vw,2.8rem);
+  font-weight:400;
+  line-height:1.08;
+  letter-spacing:-.015em;
+  margin-bottom:.75rem;
+}
+.q-hint {
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:.93rem;
+  color:var(--text-dim);
+  margin-bottom:1.875rem;
+  line-height:1.55;
+}
+
+/* ── HINT "seleccioná opción" ── */
+.q-select-hint {
+  font-size: .65rem;
+  letter-spacing: .08em;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.q-select-hint.visible { opacity: 1; }
+
+/* Options */
+.opts { display:flex; flex-direction:column; gap:.5rem; margin-bottom:2rem; }
+.opt-btn {
+  display:flex; align-items:center;
+  padding:1rem 1.15rem;
+  border:1px solid var(--border2);
+  background:transparent;
+  color:var(--text-mid);
+  font-family:var(--sans);
+  font-size:.74rem;
+  font-weight:400;
+  letter-spacing:.03em;
+  cursor:pointer;
+  text-align:left;
+  gap:1rem;
+  -webkit-appearance:none;
+  transition: border-color .22s, background .22s, color .22s;
+  min-height:58px;
+}
+.opt-btn.active {
+  border-color:var(--gold);
+  color:var(--gold);
+  background:var(--gold-pale);
+}
+.opt-btn:active { background:var(--gold-pale); border-color:var(--gold); }
+.opt-num {
+  font-family:var(--serif);
+  font-size:1.05rem;
+  font-style:italic;
+  color:var(--text-dim);
+  min-width:1.3rem;
+  transition:color .22s;
+}
+.opt-btn.active .opt-num { color:var(--gold); }
+.opt-main { flex:1; }
+.opt-title { font-weight:600; font-size:.82rem; letter-spacing:.04em; line-height:1.3; }
+.opt-sub { font-size:.72rem; color:var(--text-dim); margin-top:.2rem; line-height:1.35; }
+.opt-btn.active .opt-sub { color:rgba(201,169,110,0.55); }
+.opt-check {
+  width:18px; height:18px;
+  border:1px solid var(--border);
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  transition:all .22s; flex-shrink:0;
+}
+.opt-btn.active .opt-check { background:var(--gold); border-color:var(--gold); }
+
+/* Inputs */
+.field-row { display:grid; grid-template-columns:1fr 1fr; gap:.875rem; }
+.field-row.single { grid-template-columns:1fr; }
+.field-wrap { margin-bottom:1.25rem; }
+.field-label {
+  font-size:.62rem; letter-spacing:.18em;
+  text-transform:uppercase; color:var(--text-dim);
+  margin-bottom:.6rem; display:block;
+}
+.luxury-input {
+  width:100%;
+  background:transparent;
+  border:none;
+  border-bottom:1px solid var(--border);
+  padding:.8rem 0;
+  color:var(--text);
+  font-family:var(--sans);
+  font-size:1rem;
+  font-weight:300;
+  letter-spacing:.04em;
+  outline:none;
+  transition:border-color .25s;
+  -webkit-appearance:none;
+  border-radius:0;
+}
+.luxury-input::placeholder { color:var(--text-dim); }
+.luxury-input:focus { border-color:var(--gold); }
+/* Estado de error/validación */
+.luxury-input.input-error { border-color: var(--red) !important; }
+.luxury-input.input-ok    { border-color: var(--green) !important; }
+.field-error-msg {
+  font-size: .62rem;
+  color: var(--red);
+  letter-spacing: .06em;
+  margin-top: .35rem;
+  display: none;
+  font-style: italic;
+}
+.field-error-msg.visible { display: block; }
+
+.multi-note {
+  font-size:.75rem; letter-spacing:.06em;
+  color:var(--text-dim); margin-bottom:1.25rem;
+  font-style:italic;
+}
+
+/* Nav */
+.quiz-nav {
+  display:flex; align-items:center; gap:.875rem;
+  padding-bottom:calc(1rem + var(--safe-bottom));
+}
+.btn-prev {
+  display:flex; align-items:center; gap:.4rem;
+  background:transparent; border:none;
+  color:var(--text-dim);
+  font-family:var(--sans);
+  font-size:.68rem; letter-spacing:.12em;
+  text-transform:uppercase; cursor:pointer;
+  padding:.9rem 0; flex-shrink:0;
+  min-height:54px;
+}
+.btn-advance {
+  flex:1;
+  display:flex; align-items:center; justify-content:center; gap:.875rem;
+  padding:1rem 1.5rem;
+  border:1px solid var(--gold);
+  background:transparent;
+  color:var(--gold);
+  font-family:var(--sans);
+  font-size:.68rem; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase;
+  cursor:pointer;
+  -webkit-appearance:none;
+  transition:background .3s, color .3s;
+  min-height:54px;
+}
+.btn-advance:active { background:var(--gold); color:var(--ink); }
+@media (hover:hover) { .btn-advance:hover { background:var(--gold); color:var(--ink); } }
+.btn-advance:disabled { opacity:.25; pointer-events:none; }
+
+/* ══════════════════════
+   EMAIL GATE
+══════════════════════ */
+#emailgate {
+  display:none;
+  min-height:100vh; min-height:100dvh;
+  flex-direction:column;
+  align-items:center; justify-content:center;
+  padding: 2rem 1.5rem;
+  position: relative;
+}
+#emailgate::before {
+  content:'';
+  position:absolute;
+  width:500px; height:500px;
+  background:radial-gradient(ellipse at center,rgba(201,169,110,0.055) 0%,transparent 68%);
+  top:40%; left:50%;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+.gate-frame {
+  position: fixed; inset: 14px;
+  border: 1px solid var(--border2);
+  pointer-events: none;
+}
+.gate-inner {
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+  position: relative; z-index: 1;
+  animation: fadeUp .5s ease both;
+}
+.gate-icon {
+  width: 52px; height: 52px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.75rem;
+}
+.gate-icon svg { width: 22px; height: 22px; color: var(--gold); }
+.gate-eyebrow {
+  font-size: .65rem;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.gate-title {
+  font-family: var(--display);
+  font-size: clamp(1.8rem, 8vw, 2.6rem);
+  font-weight: 700;
+  line-height: .95;
+  letter-spacing: -.025em;
+  margin-bottom: .875rem;
+}
+.gate-title em { font-style: italic; color: var(--gold); font-weight: 400; }
+.gate-sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .9rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+.gate-sub strong {
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--gold3);
+  letter-spacing: .04em;
+}
+.gate-form {
+  display: flex;
+  flex-direction: column;
+  gap: .875rem;
+  width: 100%;
+}
+.gate-input-wrap { position: relative; }
+.gate-input {
+  width: 100%;
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 1rem 1.25rem;
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: .88rem;
+  font-weight: 300;
+  letter-spacing: .04em;
+  outline: none;
+  transition: border-color .25s;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+.gate-input::placeholder { color: var(--text-dim); }
+.gate-input:focus { border-color: var(--gold); }
+.gate-input.input-error { border-color: var(--red); }
+
+.gate-btn {
+  width: 100%;
+  display: flex;
+  align-items: center; justify-content: center;
+  gap: .875rem;
+  padding: 1.1rem 2rem;
+  border: 1px solid var(--gold);
+  background: var(--gold);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background .3s, color .3s;
+  min-height: 54px;
+}
+.gate-btn:active { background: var(--gold2); border-color: var(--gold2); }
+@media (hover:hover) { .gate-btn:hover { background: var(--gold3); border-color: var(--gold3); } }
+
+.gate-privacy {
+  font-size: .6rem;
+  color: var(--text-dim);
+  letter-spacing: .08em;
+  margin-top: .875rem;
+  line-height: 1.6;
+}
+.gate-privacy a {
+  color: rgba(201,169,110,0.5);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.gate-skip {
+  background: transparent; border: none;
+  color: var(--text-dim);
+  font-family: var(--sans);
+  font-size: .6rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 1.25rem;
+  padding: .5rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.gate-benefits {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  margin-bottom: 1.75rem;
+  text-align: left;
+}
+.gate-benefit {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-size: .72rem;
+  color: var(--text-mid);
+  letter-spacing: .04em;
+}
+.gate-benefit svg { width: 12px; height: 12px; color: var(--gold); flex-shrink: 0; }
+
+/* ══════════════════════
+   LOADING
+══════════════════════ */
+#loading {
+  display:none;
+  min-height:100vh; min-height:100dvh;
+  flex-direction:column;
+  align-items:center; justify-content:center;
+  gap:2rem;
+}
+.load-emblem {
+  position: relative;
+  width: 72px; height: 72px;
+}
+.load-ring-outer {
+  position: absolute; inset: 0;
+  border: 1px solid var(--border2);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+.load-ring-inner {
+  position: absolute; inset: 10px;
+  border: 1px solid var(--border3);
+  border-bottom-color: rgba(201,169,110,0.4);
+  border-radius: 50%;
+  animation: spin 1.4s linear infinite reverse;
+}
+.load-dot {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 4px; height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+  animation: breathe 2s ease-in-out infinite;
+}
+@keyframes spin { to { transform:rotate(360deg); } }
+.load-label {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .92rem;
+  color: var(--text-dim);
+  letter-spacing: .1em;
+  animation: breathe 2.8s ease-in-out infinite;
+  text-align: center;
+}
+.load-name {
+  font-family: var(--sans);
+  font-size: .68rem;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: rgba(201,169,110,0.55);
+  margin-top: .35rem;
+}
+@keyframes breathe { 0%,100%{opacity:.3} 50%{opacity:1} }
+
+/* ══════════════════════
+   RESULTS
+══════════════════════ */
+#results { display:none; }
+
+.res-topbar {
+  position: sticky; top: 0; z-index: 100;
+  padding: calc(.875rem + var(--safe-top)) 1.25rem .875rem;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(10,8,6,0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border2);
+}
+.res-logo {
+  font-family: var(--sans);
+  font-size: .65rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--gold); font-weight: 800;
+}
+.res-badge {
+  font-size: .62rem; letter-spacing: .16em;
+  text-transform: uppercase; font-weight: 700;
+  padding: .3rem .875rem;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  background: var(--gold-pale);
+}
+.res-hero {
+  padding: 2.5rem 1.25rem 0;
+  position: relative;
+  overflow: hidden;
+}
+.res-hero::after {
+  content:'';
+  position: absolute;
+  width: 300px; height: 300px;
+  background: radial-gradient(ellipse, rgba(201,169,110,0.055) 0%, transparent 70%);
+  top: 0; right: -60px;
+  pointer-events: none;
+}
+.res-eyebrow {
+  font-size: .65rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 1.1rem;
+  display: flex; align-items: center; gap: .75rem;
+}
+.res-eyebrow::after { content:''; height:1px; flex:1; background:var(--border2); }
+.res-name {
+  font-family: var(--display);
+  font-size: clamp(2.4rem,11vw,4rem);
+  font-weight: 700;
+  line-height: .9;
+  letter-spacing: -.025em;
+  margin-bottom: .5rem;
+}
+.res-name em { font-style: italic; color: var(--gold); font-weight: 400; }
+.res-tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .98rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border2);
+  border: 1px solid var(--border2);
+  margin: 0 1.25rem;
+}
+.stat-cell {
+  background: var(--ink);
+  padding: 1rem .75rem;
+  text-align: center;
+}
+.stat-cell .val {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  color: var(--gold3);
+  font-weight: 400;
+  display: block;
+  line-height: 1;
+}
+.stat-cell .val-unit {
+  font-family: var(--sans);
+  font-size: .6rem;
+  color: var(--text-dim);
+  font-weight: 500;
+  letter-spacing: .08em;
+  margin-left: .15rem;
+}
+.stat-cell .key {
+  font-size: .58rem;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  display: block;
+  margin-top: .45rem;
+}
+.res-body {
+  padding: 2rem 1.25rem calc(5rem + var(--safe-bottom));
+}
+.res-section { margin-bottom: 1.25rem; }
+.sec-header {
+  display: flex;
+  align-items: center;
+  gap: .875rem;
+  margin-bottom: 1.1rem;
+  padding-bottom: .75rem;
+  border-bottom: 1px solid var(--border2);
+}
+.sec-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--gold);
+  opacity: .5;
+  flex-shrink: 0;
+  line-height: 1;
+}
+.sec-title {
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--text);
+  line-height: 1.3;
+}
+.sec-content {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  line-height: 1.95;
+  color: var(--text-mid);
+}
+.sec-content p { margin-bottom: .875rem; }
+.sec-content p:last-child { margin-bottom: 0; }
+.sec-content .kw {
+  color: var(--text);
+  font-weight: 600;
+  font-family: var(--sans);
+  font-size: .85em;
+  letter-spacing: .02em;
+}
+.sec-content .gd {
+  color: var(--gold3);
+  font-style: normal;
+  font-weight: 500;
+}
+.sec-list { list-style: none; }
+.sec-list-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--border3);
+}
+.sec-list-item:last-child { border-bottom: none; }
+.sec-list-marker {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .82rem;
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: .15rem;
+  min-width: 1.2rem;
+  line-height: 1.7;
+}
+.sec-list-text {
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-mid);
+}
+.sec-divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: .5rem 0 1.75rem;
+  opacity: .4;
+}
+.sec-divider::before, .sec-divider::after {
+  content:''; flex:1; height:1px; background:var(--border2);
+}
+.sec-divider-dot {
+  width: 4px; height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+  opacity: .5;
+}
+.ai-loading {
+  display: flex; align-items: center; gap: 1rem; padding: 1.5rem 0;
+}
+.ai-load-dot {
+  width: 4px; height: 4px; background: var(--gold);
+  border-radius: 50%; opacity: 0;
+  animation: dotPulse 1.6s ease-in-out infinite;
+}
+.ai-load-dot:nth-child(2) { animation-delay: .2s; }
+.ai-load-dot:nth-child(3) { animation-delay: .4s; }
+@keyframes dotPulse { 0%,100%{opacity:0;transform:scale(.6)} 50%{opacity:1;transform:scale(1)} }
+.ai-load-text {
+  font-family: var(--serif); font-style: italic;
+  font-size: .85rem; color: var(--text-dim);
+  animation: breathe 2.5s ease-in-out infinite;
+}
+
+/* ── CTA FINAL MEJORADO ── */
+.cta-block {
+  margin-top: 2.5rem;
+  border: 1px solid var(--border2);
+  overflow: hidden;
+}
+.cta-block-header {
+  padding: 1.5rem 1.25rem 1.25rem;
+  background: var(--gold-pale);
+  border-bottom: 1px solid var(--border2);
+}
+.cta-block-eyebrow {
+  font-size: .62rem;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: .75rem;
+}
+.cta-block-title {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--text);
+  margin-bottom: .5rem;
+  line-height: 1.1;
+}
+.cta-block-title span { color: var(--gold); }
+.cta-block-sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .85rem;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+.cta-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.cta-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border2);
+  text-decoration: none;
+  cursor: pointer;
+  background: transparent;
+  border-left: none; border-right: none; border-top: none;
+  width: 100%;
+  text-align: left;
+  transition: background .25s;
+}
+.cta-option:last-child { border-bottom: none; }
+.cta-option:active, .cta-option:hover { background: var(--gold-pale); }
+.cta-option-icon {
+  width: 36px; height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.cta-option-icon svg { width: 16px; height: 16px; color: var(--gold); }
+.cta-option-main { flex: 1; }
+.cta-option-label {
+  font-family: var(--sans);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--text);
+  margin-bottom: .2rem;
+}
+.cta-option-sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .8rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+.cta-option-arrow { color: var(--gold); flex-shrink: 0; }
+.cta-option-arrow svg { width: 12px; height: 12px; }
+/* WhatsApp como opción primaria */
+.cta-option.primary {
+  background: rgba(201,169,110,0.06);
+  border-bottom: 1px solid var(--border2) !important;
+}
+
+/* ── COMPARTIR ── */
+.share-block {
+  margin-top: 1.25rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border2);
+  text-align: center;
+}
+.share-title {
+  font-size: .62rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 1rem;
+}
+.share-btns {
+  display: flex;
+  gap: .625rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .7rem 1.1rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text-mid);
+  font-family: var(--sans);
+  font-size: .62rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color .2s, color .2s, background .2s;
+  -webkit-appearance: none;
+  min-height: 44px;
+}
+.share-btn:active,
+.share-btn:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-pale); }
+.share-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
+/* Toast de copiado */
+.copy-toast {
+  position: fixed;
+  bottom: calc(4rem + var(--safe-bottom));
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--gold);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  padding: .625rem 1.25rem;
+  opacity: 0;
+  transition: opacity .3s, transform .3s;
+  pointer-events: none;
+  z-index: 9999;
+  white-space: nowrap;
+}
+.copy-toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Restart */
+.restart-wrap {
+  padding: 2rem 0 .5rem;
+  display: flex; justify-content: center;
+}
+.btn-restart {
+  display:flex; align-items:center; gap:.5rem;
+  background:transparent; border:none;
+  color:var(--text-dim);
+  font-family:var(--sans);
+  font-size:.65rem; letter-spacing:.18em;
+  text-transform:uppercase; cursor:pointer;
+  padding:.5rem; min-height:44px;
+  transition: color .2s;
+}
+.btn-restart:active, .btn-restart:hover { color:var(--text-mid); }
+
+/* ══════════════════════
+   MACROS BLOCK
+══════════════════════ */
+.macros-block {
+  margin: 2rem 1.25rem 0;
+  border: 1px solid var(--border2);
+  overflow: hidden;
+}
+.macros-header {
+  padding: 1rem 1.25rem .875rem;
+  background: var(--gold-pale);
+  border-bottom: 1px solid var(--border2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.macros-eyebrow {
+  font-size: .62rem;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 700;
+}
+.macros-badge {
+  font-size: .58rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-style: italic;
+}
+.macros-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border2);
+}
+.macro-card {
+  background: var(--ink);
+  padding: 1.25rem 1rem 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.macro-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--mc-color, var(--gold));
+  opacity: .6;
+}
+.macro-label {
+  font-size: .58rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: .625rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.macro-label-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--mc-color, var(--gold));
+  flex-shrink: 0;
+}
+.macro-val {
+  font-family: var(--display);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--text);
+  line-height: 1;
+  margin-bottom: .3rem;
+}
+.macro-val-unit {
+  font-family: var(--sans);
+  font-size: .65rem;
+  font-weight: 500;
+  color: var(--text-dim);
+  letter-spacing: .08em;
+  margin-left: .2rem;
+}
+.macro-sub {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .75rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+.macro-bar-wrap {
+  margin-top: .875rem;
+  height: 2px;
+  background: var(--border2);
+  border-radius: 1px;
+  overflow: hidden;
+}
+.macro-bar {
+  height: 100%;
+  border-radius: 1px;
+  background: var(--mc-color, var(--gold));
+  width: 0%;
+  transition: width 1.2s cubic-bezier(.4,0,.2,1);
+  opacity: .7;
+}
+.macro-card.full {
+  grid-column: 1 / -1;
+}
+.macro-card.full .macro-val { font-size: 2.6rem; }
+.macros-note {
+  padding: .875rem 1.25rem;
+  border-top: 1px solid var(--border2);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: .78rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+  text-align: center;
+}
+.macros-note strong {
+  font-style: normal;
+  font-family: var(--sans);
+  font-size: .68rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .06em;
+}
+
+/* KEYFRAMES */
+@keyframes fadeIn { from{opacity:0} to{opacity:1} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:none} }
+</style>
+</head>
+<body>
+
+<!-- Toast de copiado -->
+<div class="copy-toast" id="copy-toast">Enlace copiado</div>
+
+<!-- Watermark fija -->
+<div class="watermark" id="wm-fixed" style="display:none">
+  <span class="wm-brand">StrengthLab</span>
+  <span class="wm-name">Renzo Bello</span>
+</div>
+
+<!-- ══ LANDING ══ -->
+<section id="landing">
+  <div class="landing-frame"></div>
+  <nav class="landing-nav">
+    <div class="nav-logo">
+      Método
+      <small>by StrengthLab</small>
+    </div>
+  </nav>
+
+  <!-- SOCIAL PROOF BAR -->
+  <div class="social-proof-bar">
+    <div class="sp-avatars">
+      <div class="sp-avatar">MG</div>
+      <div class="sp-avatar">JR</div>
+      <div class="sp-avatar">LT</div>
+      <div class="sp-avatar">AP</div>
+    </div>
+    <div class="sp-text">
+      <strong>+2.400 perfiles analizados</strong><br>
+      Esta semana 47 personas completaron su guía
+    </div>
+    <div class="sp-dot"></div>
+  </div>
+
+  <div class="landing-body">
+    <p class="eyebrow">Nutrición de Alto Rendimiento</p>
+    <h1 class="hero-h1">
+      Tu cuerpo.<br>
+      Tu <em>método.</em>
+    </h1>
+    <div class="hero-divider">
+      <span></span>
+      <i>Para quienes se toman en serio sus resultados</i>
+      <span></span>
+    </div>
+    <p class="hero-p">
+      Respondé 8 preguntas y recibí una guía alimentaria construida sobre tu perfil real.
+    </p>
+    <button class="cta-btn" onclick="startQuiz()">
+      <span>Comenzar mi análisis</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="5" y1="12" x2="19" y2="12"/>
+        <polyline points="12 5 19 12 12 19"/>
+      </svg>
+    </button>
+
+    <!-- Credenciales -->
+    <div class="landing-creds">
+      <div class="cred-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+        </svg>
+        Nutrición deportiva
+      </div>
+      <div class="cred-sep"></div>
+      <div class="cred-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        100% privado
+      </div>
+      <div class="cred-sep"></div>
+      <div class="cred-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        3 min
+      </div>
+    </div>
+  </div>
+
+  <div class="sl-brand-mark">
+    <div class="sl-monogram">SL</div>
+    <div class="sl-sub">StrengthLab</div>
+    <div class="sl-name">Renzo Bello</div>
+  </div>
+</section>
+
+<!-- ══ QUIZ ══ -->
+<section id="quiz">
+  <div class="quiz-frame"></div>
+  <div class="quiz-topbar">
+    <div class="quiz-logo">Método</div>
+    <div class="progress-track" id="prog-track" style="--pct:0%">
+      <div class="progress-label" id="prog-label">0%</div>
+    </div>
+    <div class="q-counter" id="q-counter">1 — 8</div>
+  </div>
+  <div class="quiz-stage">
+    <div class="quiz-inner" id="q-inner"></div>
+  </div>
+</section>
+
+<!-- ══ EMAIL GATE ══ -->
+<section id="emailgate">
+  <div class="gate-frame"></div>
+  <div class="gate-inner">
+    <div class="gate-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+    </div>
+    <p class="gate-eyebrow">Tu guía está lista</p>
+    <h2 class="gate-title">Recibila en <em>tu correo</em></h2>
+    <p class="gate-sub" id="gate-sub">
+      Ingresá tu email y te enviamos la guía completa<br>para que no la pierdas.
+    </p>
+    <div class="gate-benefits">
+      <div class="gate-benefit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        Tu guía personalizada en tu bandeja de entrada
+      </div>
+      <div class="gate-benefit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        Acceso a consejos semanales de StrengthLab
+      </div>
+      <div class="gate-benefit">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        Sin spam. Podés darte de baja cuando quieras
+      </div>
+    </div>
+    <div class="gate-form">
+      <div class="gate-input-wrap">
+        <input
+          class="gate-input"
+          id="gate-email"
+          type="email"
+          inputmode="email"
+          placeholder="tu@email.com"
+          autocomplete="email"
+          enterkeyhint="go"
+        >
+      </div>
+      <button class="gate-btn" onclick="submitEmail()">
+        <span>Ver mi guía personalizada</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="12 5 19 12 12 19"/>
+        </svg>
+      </button>
+    </div>
+    <p class="gate-privacy">
+      Tu privacidad es sagrada. Nunca compartimos tu email con terceros.<br>
+    </p>
+    <button class="gate-skip" onclick="skipEmail()">Continuar sin email</button>
+  </div>
+</section>
+
+<!-- ══ LOADING ══ -->
+<section id="loading" style="display:none; flex-direction:column; align-items:center; justify-content:center; min-height:100dvh; gap:2rem;">
+  <div class="load-emblem">
+    <div class="load-ring-outer"></div>
+    <div class="load-ring-inner"></div>
+    <div class="load-dot"></div>
+  </div>
+  <div style="text-align:center;">
+    <p class="load-label" id="load-msg">Construyendo tu perfil…</p>
+    <p class="load-name">StrengthLab · Método</p>
+  </div>
+</section>
+
+<!-- ══ RESULTS ══ -->
+<section id="results">
+  <div class="res-topbar">
+    <div class="res-logo">StrengthLab · Método</div>
+    <div class="res-badge" id="res-badge">—</div>
+  </div>
+  <div class="res-hero">
+    <div class="res-eyebrow">Tu guía personalizada</div>
+    <h2 class="res-name" id="res-name">…</h2>
+    <p class="res-tagline" id="res-tagline"></p>
+  </div>
+  <div class="profile-stats" id="profile-stats"></div>
+  <div class="res-body" id="res-body"></div>
+</section>
+
+<script>
+/* ═══════════════════════
+   PREGUNTAS
+═══════════════════════ */
+const QS = [
+  {
+    id:'name', type:'name',
+    q:'¿Cómo te llamas?',
+    hint:'Usaremos tu nombre para personalizar cada sección de tu guía'
+  },
+  {
+    id:'goal', type:'single',
+    q:'¿Cuál es tu objetivo principal?',
+    hint:'La base de toda tu estrategia nutricional',
+    opts:[
+      {v:'definicion', t:'Perder grasa',         s:'Etapa de definición — reducir grasa preservando músculo'},
+      {v:'volumen',    t:'Ganar músculo',         s:'Etapa de volumen — construir masa muscular de calidad'},
+      {v:'mantencion', t:'Mantener composición', s:'Etapa de mantención — sostener el resultado obtenido'},
+    ]
+  },
+  {
+    id:'bio', type:'bio',
+    q:'Tus datos físicos',
+    hint:'Edad, peso y altura — para calibrar tu guía con precisión'
+  },
+  {
+    id:'sex', type:'single',
+    q:'¿Cuál es tu sexo biológico?',
+    hint:'Determina diferencias metabólicas clave en tu respuesta nutricional',
+    opts:[
+      {v:'hombre', t:'Masculino', s:''},
+      {v:'mujer',  t:'Femenino',  s:''},
+    ]
+  },
+  {
+    id:'activity', type:'single',
+    q:'Tu nivel de actividad física',
+    hint:'¿Cuánto te movés en una semana típica?',
+    opts:[
+      {v:'sedentario', t:'Sedentario',  s:'Poco o nada de ejercicio estructurado'},
+      {v:'moderado',   t:'Moderado',    s:'2 a 3 sesiones por semana'},
+      {v:'activo',     t:'Activo',      s:'4 a 5 sesiones por semana'},
+      {v:'muy_activo', t:'Muy activo',  s:'6 o más sesiones / trabajo físico intenso'},
+    ]
+  },
+  {
+    id:'experience', type:'single',
+    q:'¿Cuánto tiempo llevás entrenando?',
+    hint:'Tu nivel de experiencia modifica las recomendaciones',
+    opts:[
+      {v:'principiante', t:'Principiante', s:'Menos de 1 año de entrenamiento consistente'},
+      {v:'intermedio',   t:'Intermedio',   s:'1 a 3 años con progresión regular'},
+      {v:'avanzado',     t:'Avanzado',     s:'Más de 3 años con método y estructura'},
+    ]
+  },
+  {
+    id:'restrictions', type:'multi',
+    q:'Restricciones alimentarias',
+    hint:'Seleccioná todas las que apliquen — adaptaremos tu plan',
+    opts:[
+      {v:'vegetariano', t:'Vegetariano/a',            s:'Sin carnes ni pescados'},
+      {v:'sin_lactosa', t:'Intolerante a la lactosa',  s:'Evito lácteos o uso versión sin lactosa'},
+      {v:'sin_gluten',  t:'Celíaco / sin gluten',      s:'Sin trigo, avena, cebada ni centeno'},
+      {v:'ninguna',     t:'Sin restricciones',         s:'Como de todo sin limitaciones'},
+    ]
+  },
+  {
+    id:'budget', type:'single',
+    q:'¿Cómo es tu presupuesto para alimentación?',
+    hint:'Para orientar las recomendaciones de compra a tu realidad',
+    opts:[
+      {v:'economico', t:'Ajustado',        s:'Prefiero opciones económicas y accesibles'},
+      {v:'moderado',  t:'Moderado',         s:'Puedo invertir en variedad y calidad media'},
+      {v:'alto',      t:'Sin restricción',  s:'Priorizo calidad sobre precio'},
+    ]
+  },
+  {
+    id:'bodyfat', type:'single',
+    q:'¿Cómo describirías tu porcentaje de grasa corporal actual?',
+    hint:'Una estimación visual — no necesitás medición exacta',
+    opts:[
+      {v:'muy_bajo',  t:'Muy bajo',          s:'Se marcan venas y músculos claramente — menos del 12% (H) / 20% (M)'},
+      {v:'bajo',      t:'Bajo',              s:'Abdomen visible o casi visible — 12-17% (H) / 20-25% (M)'},
+      {v:'moderado',  t:'Moderado',          s:'Algo de grasa abdominal, músculo presente — 18-24% (H) / 26-32% (M)'},
+      {v:'alto',      t:'Alto',              s:'Capa de grasa notable sobre el músculo — más del 25% (H) / 33% (M)'},
+    ]
+  },
+  {
+    id:'training_type', type:'multi',
+    q:'¿Qué tipo de entrenamiento realizás?',
+    hint:'Seleccioná todos los que apliquen — afecta la distribución de macros',
+    opts:[
+      {v:'pesas',    t:'Pesas / fuerza',         s:'Entrenamiento con cargas, hipertrofia o powerlifting'},
+      {v:'cardio',   t:'Cardio / aeróbico',       s:'Running, ciclismo, natación, elíptica'},
+      {v:'crossfit', t:'CrossFit / funcional',    s:'Entrenamiento de alta intensidad variado'},
+      {v:'deportes', t:'Deportes de equipo',      s:'Fútbol, básquet, tenis u otros deportes'},
+      {v:'mixto',    t:'Mixto (fuerza + cardio)', s:'Combinación de ambos tipos en la semana'},
+    ]
+  },
+];
+
+let cur = 0, ans = {}, multi = [];
+let advanceAttempted = false;
+
+function startQuiz(){
+  document.getElementById('landing').style.display = 'none';
+  document.getElementById('quiz').style.display = 'block';
+  document.getElementById('wm-fixed').style.display = 'flex';
+  renderQ();
+}
+
+function renderQ(){
+  const q = QS[cur];
+  const pct = Math.round((cur / QS.length) * 100);
+  document.getElementById('prog-track').style.setProperty('--pct', pct + '%');
+  document.getElementById('prog-label').textContent = pct + '%';
+  document.getElementById('prog-label').style.setProperty('--pct', pct + '%');
+  document.getElementById('q-counter').textContent = `${cur+1} — ${QS.length}`;
+  advanceAttempted = false;
+
+  let html = `
+    <div class="q-eyebrow">Pregunta ${cur+1}</div>
+    <h2 class="q-headline">${q.q}</h2>
+    ${q.hint ? `<p class="q-hint">${q.hint}</p>` : ''}
+  `;
+
+  if(q.type === 'name'){
+    const v = ans[q.id] || '';
+    html += `
+      <div class="field-wrap" style="margin-bottom:1.875rem">
+        <label class="field-label">Nombre</label>
+        <input class="luxury-input" id="name-in" type="text"
+          placeholder="Escribí tu nombre…" value="${v}" maxlength="40"
+          autocomplete="given-name" spellcheck="false" enterkeyhint="next">
+      </div>`;
+  }
+  else if(q.type === 'bio'){
+    const b = ans[q.id] || {};
+    html += `
+      <div class="field-row">
+        <div class="field-wrap">
+          <label class="field-label">Edad (años)</label>
+          <input class="luxury-input" id="age-in" type="number" inputmode="numeric"
+            min="14" max="80" placeholder="Ej. 24" value="${b.age || ''}" enterkeyhint="next">
+          <span class="field-error-msg" id="age-err">Ingresá un valor entre 14 y 80</span>
+        </div>
+        <div class="field-wrap">
+          <label class="field-label">Peso (kg)</label>
+          <input class="luxury-input" id="wei-in" type="number" inputmode="decimal"
+            min="30" max="250" placeholder="Ej. 75" value="${b.weight || ''}" enterkeyhint="next">
+          <span class="field-error-msg" id="wei-err">Ingresá un valor entre 30 y 250</span>
+        </div>
+      </div>
+      <div class="field-row single">
+        <div class="field-wrap">
+          <label class="field-label">Altura (cm)</label>
+          <input class="luxury-input" id="hei-in" type="number" inputmode="numeric"
+            min="130" max="230" placeholder="Ej. 175" value="${b.height || ''}" enterkeyhint="done">
+          <span class="field-error-msg" id="hei-err">Ingresá un valor entre 130 y 230</span>
+        </div>
+      </div>`;
+  }
+  else if(q.type === 'single'){
+    multi = [];
+    const saved = ans[q.id] || null;
+    html += `<p class="q-select-hint" id="select-hint">Seleccioná una opción para continuar</p><div class="opts">`;
+    q.opts.forEach((o, i) => {
+      const ac = saved === o.v ? 'active' : '';
+      html += `
+        <button class="opt-btn ${ac}" onclick="pickSingle('${o.v}',this)">
+          <span class="opt-num">${String.fromCharCode(65+i)}</span>
+          <span class="opt-main">
+            <span class="opt-title">${o.t}</span>
+            ${o.s ? `<span class="opt-sub">${o.s}</span>` : ''}
+          </span>
+          <span class="opt-check">
+            ${ac ? `<svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>` : ''}
+          </span>
+        </button>`;
+    });
+    html += `</div>`;
+  }
+  else if(q.type === 'multi'){
+    multi = ans[q.id] ? [...ans[q.id]] : [];
+    html += `<p class="multi-note">Podés seleccionar más de una opción</p><div class="opts">`;
+    q.opts.forEach((o, i) => {
+      const ac = multi.includes(o.v) ? 'active' : '';
+      html += `
+        <button class="opt-btn ${ac}" data-val="${o.v}" onclick="pickMulti(this)">
+          <span class="opt-num">${String.fromCharCode(65+i)}</span>
+          <span class="opt-main">
+            <span class="opt-title">${o.t}</span>
+            ${o.s ? `<span class="opt-sub">${o.s}</span>` : ''}
+          </span>
+          <span class="opt-check">
+            ${ac ? `<svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>` : ''}
+          </span>
+        </button>`;
+    });
+    html += `</div>`;
+  }
+
+  const isFirst = cur === 0;
+  const isLast  = cur === QS.length - 1;
+  html += `<div class="quiz-nav">
+    ${!isFirst ? `<button class="btn-prev" onclick="goBack()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+      </svg>
+      Atrás
+    </button>` : ''}
+    <button class="btn-advance" id="adv-btn" onclick="advance()" disabled>
+      <span>${isLast ? 'Ver mi guía' : 'Continuar'}</span>
+    </button>
+  </div>`;
+
+  document.getElementById('q-inner').innerHTML = html;
+  chkValid();
+
+  if(q.type === 'name'){
+    const el = document.getElementById('name-in');
+    el.focus();
+    el.addEventListener('input', chkValid);
+    el.addEventListener('keydown', e => { if(e.key === 'Enter') advance(); });
+  }
+  if(q.type === 'bio'){
+    ['age-in','wei-in','hei-in'].forEach(id => {
+      const el = document.getElementById(id);
+      if(el){
+        el.addEventListener('input', () => { validateBioField(id); chkValid(); });
+        el.addEventListener('blur',  () => validateBioField(id));
+      }
+    });
+  }
+}
+
+/* Validación individual de campos bio */
+function validateBioField(id){
+  const el = document.getElementById(id);
+  if(!el || !el.value) return;
+  const v = parseFloat(el.value);
+  const ranges = { 'age-in': [14,80], 'wei-in': [30,250], 'hei-in': [130,230] };
+  const errIds = { 'age-in': 'age-err', 'wei-in': 'wei-err', 'hei-in': 'hei-err' };
+  const [min, max] = ranges[id];
+  const errEl = document.getElementById(errIds[id]);
+  if(v < min || v > max){
+    el.classList.add('input-error');
+    el.classList.remove('input-ok');
+    if(errEl) errEl.classList.add('visible');
+  } else {
+    el.classList.remove('input-error');
+    el.classList.add('input-ok');
+    if(errEl) errEl.classList.remove('visible');
+  }
+}
+
+function isBioValid(){
+  const age = parseFloat(document.getElementById('age-in')?.value);
+  const wei = parseFloat(document.getElementById('wei-in')?.value);
+  const hei = parseFloat(document.getElementById('hei-in')?.value);
+  return age >= 14 && age <= 80 && wei >= 30 && wei <= 250 && hei >= 130 && hei <= 230;
+}
+
+function chkValid(){
+  const q   = QS[cur];
+  const btn = document.getElementById('adv-btn');
+  if(!btn) return;
+  let ok = false;
+  if(q.type === 'name')   ok = document.getElementById('name-in')?.value.trim().length > 0;
+  if(q.type === 'bio')    ok = isBioValid();
+  if(q.type === 'single') ok = !!ans[q.id];
+  if(q.type === 'multi')  ok = multi.length > 0;
+  btn.disabled = !ok;
+}
+
+function pickSingle(val, el){
+  ans[QS[cur].id] = val;
+  document.querySelectorAll('.opt-btn').forEach(b => {
+    b.classList.remove('active');
+    b.querySelector('.opt-check').innerHTML = '';
+  });
+  el.classList.add('active');
+  el.querySelector('.opt-check').innerHTML = `<svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>`;
+  // Ocultar hint
+  const hint = document.getElementById('select-hint');
+  if(hint) hint.classList.remove('visible');
+  chkValid();
+}
+
+function pickMulti(el){
+  const val = el.getAttribute('data-val');
+  if(val === 'ninguna'){
+    multi = ['ninguna'];
+    document.querySelectorAll('.opt-btn').forEach(b => {
+      const isN = b.getAttribute('data-val') === 'ninguna';
+      b.classList.toggle('active', isN);
+      b.querySelector('.opt-check').innerHTML = isN ? `<svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>` : '';
+    });
+  } else {
+    multi = multi.filter(v => v !== 'ninguna');
+    const idx = multi.indexOf(val);
+    if(idx > -1) multi.splice(idx, 1); else multi.push(val);
+    document.querySelectorAll('.opt-btn').forEach(b => {
+      const v = b.getAttribute('data-val'); if(!v) return;
+      const on = multi.includes(v);
+      b.classList.toggle('active', on);
+      b.querySelector('.opt-check').innerHTML = on ? `<svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="3.5"><polyline points="20 6 9 17 4 12"/></svg>` : '';
+    });
+  }
+  ans[QS[cur].id] = [...multi];
+  chkValid();
+}
+
+function saveInputs(){
+  const q = QS[cur];
+  if(q.type === 'name') ans[q.id] = document.getElementById('name-in')?.value.trim();
+  if(q.type === 'bio')  ans[q.id] = {
+    age:    document.getElementById('age-in')?.value,
+    weight: document.getElementById('wei-in')?.value,
+    height: document.getElementById('hei-in')?.value,
+  };
+  if(q.type === 'multi') ans[q.id] = [...multi];
+}
+
+function advance(){
+  // Mostrar hint si intenta avanzar sin seleccionar
+  const q = QS[cur];
+  if(q.type === 'single' && !ans[q.id]){
+    const hint = document.getElementById('select-hint');
+    if(hint) hint.classList.add('visible');
+    return;
+  }
+  saveInputs();
+  if(cur < QS.length - 1){ cur++; renderQ(); }
+  else showEmailGate();
+}
+
+function goBack(){
+  saveInputs();
+  if(cur > 0){ cur--; renderQ(); }
+}
+
+/* ═══════════════════════
+   EMAIL GATE
+═══════════════════════ */
+function showEmailGate(){
+  document.getElementById('quiz').style.display = 'none';
+  const gate = document.getElementById('emailgate');
+  gate.style.display = 'flex';
+  gate.style.flexDirection = 'column';
+
+  // Personalizar subtítulo con el nombre
+  const name = ans.name || '';
+  if(name){
+    document.getElementById('gate-sub').innerHTML =
+      `<strong>${name}</strong>, tu guía está construida y lista.<br>Ingresá tu email para recibirla ahora y no perderla.`;
+  }
+
+  // Enter en el input
+  const emailEl = document.getElementById('gate-email');
+  emailEl.addEventListener('keydown', e => { if(e.key === 'Enter') submitEmail(); });
+  setTimeout(() => emailEl.focus(), 400);
+}
+
+function validateEmail(email){
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function submitEmail(){
+  const emailEl = document.getElementById('gate-email');
+  const email   = emailEl.value.trim();
+  if(!validateEmail(email)){
+    emailEl.classList.add('input-error');
+    emailEl.focus();
+    return;
+  }
+  emailEl.classList.remove('input-error');
+  ans.email = email;
+  // Aquí podés conectar tu ESP (Mailchimp, ConvertKit, etc.)
+  // fetch('/api/subscribe', { method:'POST', body: JSON.stringify({ email, name: ans.name }) });
+  showResults();
+}
+
+function skipEmail(){
+  ans.email = null;
+  showResults();
+}
+
+/* ═══════════════════════
+   SHOW RESULTS
+═══════════════════════ */
+async function showResults(){
+  document.getElementById('emailgate').style.display = 'none';
+  const loadEl = document.getElementById('loading');
+  loadEl.style.display = 'flex';
+
+  const msgs = [
+    'Construyendo tu perfil…',
+    'Analizando tu etapa nutricional…',
+    'Diseñando tu guía alimentaria…',
+    'Calibrando las recomendaciones…',
+    'Casi listo…'
+  ];
+  let mi = 0;
+  const msgEl  = document.getElementById('load-msg');
+  const iv     = setInterval(() => { msgEl.textContent = msgs[++mi % msgs.length]; }, 1800);
+
+  const bio         = ans.bio || {};
+  const planPromise = fetchPlan(bio);
+  const minWait     = new Promise(r => setTimeout(r, 3500));
+  const [planData]  = await Promise.all([planPromise, minWait]);
+
+  clearInterval(iv);
+  loadEl.style.display = 'none';
+
+  buildResultsUI(bio, planData);
+  document.getElementById('results').style.display = 'block';
+  window.scrollTo(0, 0);
+}
+
+/* ═══════════════════════
+   BUILD RESULTS UI
+═══════════════════════ */
+/* ═══════════════════════
+   CALCULAR MACROS
+   Fórmula: Mifflin-St Jeor + factor de actividad
+   ajustado por objetivo, grasa corporal y tipo de entrenamiento
+═══════════════════════ */
+function calcMacros(bio){
+  const weight = parseFloat(bio.weight);
+  const height = parseFloat(bio.height);
+  const age    = parseFloat(bio.age);
+  const isMale = ans.sex === 'hombre';
+
+  // 1. TMB (Mifflin-St Jeor)
+  let tmb = isMale
+    ? 10 * weight + 6.25 * height - 5 * age + 5
+    : 10 * weight + 6.25 * height - 5 * age - 161;
+
+  // 2. Factor de actividad
+  const actFactor = {
+    sedentario: 1.2,
+    moderado:   1.375,
+    activo:     1.55,
+    muy_activo: 1.725,
+  }[ans.activity] || 1.375;
+
+  let tdee = Math.round(tmb * actFactor);
+
+  // 3. Ajuste por tipo de entrenamiento (boost si hay pesas o crossfit)
+  const trainTypes = ans.training_type || [];
+  const hasPower = trainTypes.includes('pesas') || trainTypes.includes('crossfit');
+  const hasCardio = trainTypes.includes('cardio');
+  if(hasPower && hasCardio) tdee = Math.round(tdee * 1.04);
+  else if(hasPower)         tdee = Math.round(tdee * 1.02);
+  else if(hasCardio)        tdee = Math.round(tdee * 1.01);
+
+  // 4. Ajuste por % grasa corporal estimado
+  const bfAdj = { muy_bajo: 1.0, bajo: 1.0, moderado: 0.98, alto: 0.96 }[ans.bodyfat] || 1.0;
+  tdee = Math.round(tdee * bfAdj);
+
+  // 5. Ajuste calórico por objetivo
+  let kcal;
+  if(ans.goal === 'definicion') kcal = Math.round(tdee * 0.82);       // déficit ~18%
+  else if(ans.goal === 'volumen') kcal = Math.round(tdee * 1.10);     // superávit ~10%
+  else kcal = tdee;                                                    // mantención
+
+  // 6. Proteína (g/kg de peso corporal según objetivo y exp)
+  const protMulti = {
+    definicion:  { principiante: 2.0, intermedio: 2.2, avanzado: 2.4 },
+    volumen:     { principiante: 1.8, intermedio: 2.0, avanzado: 2.2 },
+    mantencion:  { principiante: 1.6, intermedio: 1.8, avanzado: 2.0 },
+  };
+  const pm   = (protMulti[ans.goal] || protMulti.mantencion)[ans.experience] || 2.0;
+  const prot = Math.round(weight * pm);
+
+  // 7. Grasas (25-30% de calorías)
+  const fatPct = ans.goal === 'definicion' ? 0.25 : 0.28;
+  const fat    = Math.round((kcal * fatPct) / 9);
+
+  // 8. Carbohidratos (calorías restantes)
+  const protKcal = prot * 4;
+  const fatKcal  = fat  * 9;
+  const carbs    = Math.round((kcal - protKcal - fatKcal) / 4);
+
+  // Porcentajes para barras visuales
+  const totalG   = prot + fat + carbs;
+  return {
+    kcal,
+    prot,  protPct: Math.round((prot / totalG) * 100),
+    carbs, carbsPct: Math.round((carbs/ totalG) * 100),
+    fat,   fatPct:  Math.round((fat  / totalG) * 100),
+  };
+}
+
+function buildResultsUI(bio, planData){
+  const stageMap  = { definicion:'Definición', volumen:'Volumen', mantencion:'Mantención' };
+  const genderWord = ans.sex === 'mujer' ? 'bienvenida' : 'bienvenido';
+
+  document.getElementById('res-badge').textContent = stageMap[ans.goal] || 'Personalizado';
+  document.getElementById('res-name').innerHTML    = `${ans.name || 'Tu'}, <em>${genderWord}</em>`;
+
+  const aMap = { sedentario:'nivel sedentario', moderado:'actividad moderada', activo:'nivel activo', muy_activo:'muy activo' };
+  const gMap = {
+    definicion:'Tu guía está diseñada para perder grasa conservando cada kilo de músculo.',
+    volumen:   'Tu guía está construida para maximizar la ganancia muscular de calidad.',
+    mantencion:'Tu guía te ayuda a sostener y potenciar tu composición actual.'
+  };
+  document.getElementById('res-tagline').textContent =
+    `${bio.age} años · ${bio.weight} kg · ${bio.height} cm · ${aMap[ans.activity] || ''}. ${gMap[ans.goal] || ''}`;
+
+  const imc     = (parseFloat(bio.weight) / Math.pow(parseFloat(bio.height)/100, 2)).toFixed(1);
+  const expMap  = { principiante:'1er año', intermedio:'1-3 años', avanzado:'+3 años' };
+  document.getElementById('profile-stats').innerHTML = `
+    <div class="stat-cell">
+      <span class="val">${bio.weight}<span class="val-unit">kg</span></span>
+      <span class="key">Peso</span>
+    </div>
+    <div class="stat-cell">
+      <span class="val">${imc}</span>
+      <span class="key">IMC</span>
+    </div>
+    <div class="stat-cell">
+      <span class="val">${expMap[ans.experience] || '—'}</span>
+      <span class="key">Experiencia</span>
+    </div>
+  `;
+
+  // ── Inyectar bloque macros en el DOM (antes del res-body) ──
+  const macros = calcMacros(bio);
+  const macrosEl = document.createElement('div');
+  macrosEl.className = 'macros-block';
+  const bfLabel = { muy_bajo:'Muy bajo', bajo:'Bajo', moderado:'Moderado', alto:'Alto' }[ans.bodyfat] || '—';
+  const trainLabel = (ans.training_type||[]).map(v=>({
+    pesas:'Pesas', cardio:'Cardio', crossfit:'CrossFit', deportes:'Deportes', mixto:'Mixto'
+  }[v]||v)).join(' · ') || '—';
+  macrosEl.innerHTML = `
+    <div class="macros-header">
+      <span class="macros-eyebrow">Tus macros diarios</span>
+      <span class="macros-badge">Estimación · Mifflin-St Jeor</span>
+    </div>
+    <div class="macros-grid">
+      <div class="macro-card full" style="--mc-color:#c9a96e">
+        <div class="macro-label"><span class="macro-label-dot"></span>Calorías totales</div>
+        <div class="macro-val">${macros.kcal}<span class="macro-val-unit">kcal</span></div>
+        <div class="macro-sub">Objetivo: ${({definicion:'Déficit controlado',volumen:'Superávit moderado',mantencion:'Mantención'})[ans.goal]||'—'} · TDEE base ajustado</div>
+        <div class="macro-bar-wrap"><div class="macro-bar" data-pct="100" style="background:var(--gold);opacity:.4;width:100%"></div></div>
+      </div>
+      <div class="macro-card" style="--mc-color:#7eb8f7">
+        <div class="macro-label"><span class="macro-label-dot"></span>Proteína</div>
+        <div class="macro-val">${macros.prot}<span class="macro-val-unit">g</span></div>
+        <div class="macro-sub">${macros.protPct}% del total · ${(macros.prot*4).toLocaleString()} kcal</div>
+        <div class="macro-bar-wrap"><div class="macro-bar" data-pct="${macros.protPct}" style="--mc-color:#7eb8f7;width:0%"></div></div>
+      </div>
+      <div class="macro-card" style="--mc-color:#f7c47e">
+        <div class="macro-label"><span class="macro-label-dot"></span>Carbohidratos</div>
+        <div class="macro-val">${macros.carbs}<span class="macro-val-unit">g</span></div>
+        <div class="macro-sub">${macros.carbsPct}% del total · ${(macros.carbs*4).toLocaleString()} kcal</div>
+        <div class="macro-bar-wrap"><div class="macro-bar" data-pct="${macros.carbsPct}" style="--mc-color:#f7c47e;width:0%"></div></div>
+      </div>
+      <div class="macro-card" style="--mc-color:#a8d98e">
+        <div class="macro-label"><span class="macro-label-dot"></span>Grasas</div>
+        <div class="macro-val">${macros.fat}<span class="macro-val-unit">g</span></div>
+        <div class="macro-sub">${macros.fatPct}% del total · ${(macros.fat*9).toLocaleString()} kcal</div>
+        <div class="macro-bar-wrap"><div class="macro-bar" data-pct="${macros.fatPct}" style="--mc-color:#a8d98e;width:0%"></div></div>
+      </div>
+    </div>
+    <div class="macros-note">
+      <strong>Nota:</strong> Estos valores son una estimación de referencia calculada con tu perfil.
+      Renzo ajustará tus macros exactos en la asesoría personalizada.
+      Grasa corporal: ${bfLabel} · Entrenamiento: ${trainLabel}
+    </div>
+  `;
+  document.getElementById('results').insertBefore(macrosEl, document.getElementById('res-body'));
+  // Animar barras con delay
+  setTimeout(() => {
+    macrosEl.querySelectorAll('.macro-bar[data-pct]').forEach(bar => {
+      const pct = bar.getAttribute('data-pct');
+      bar.style.width = pct + '%';
+    });
+  }, 300);
+
+  const body = document.getElementById('res-body');
+  body.innerHTML = '';
+
+  if(planData.error){
+    body.innerHTML = `<p style="font-family:var(--serif);font-style:italic;color:var(--text-dim);padding:2rem 0;">${planData.error}</p>`;
+    appendCTA(body);
+    return;
+  }
+
+  const sections = parseSections(planData.text);
+  sections.forEach((sec, i) => {
+    const div = document.createElement('div');
+    div.className = 'res-section';
+    div.innerHTML = `
+      <div class="sec-header">
+        <span class="sec-num">${String(i+1).padStart(2,'0')}</span>
+        <span class="sec-title">${sec.title}</span>
+      </div>
+      <div class="sec-content">${renderSectionContent(sec.content)}</div>
+    `;
+    body.appendChild(div);
+    if(i < sections.length - 1){
+      const div2 = document.createElement('div');
+      div2.className = 'sec-divider';
+      div2.innerHTML = '<div class="sec-divider-dot"></div>';
+      body.appendChild(div2);
+    }
+  });
+
+  appendCTA(body);
+}
+
+/* ═══════════════════════
+   CTA FINAL + COMPARTIR
+═══════════════════════ */
+function appendCTA(body){
+  const name     = ans.name || 'Tu plan';
+  const stageMap = { definicion:'Definición', volumen:'Volumen', mantencion:'Mantención' };
+  const stage    = stageMap[ans.goal] || 'Personalizado';
+
+  // CTA mejorado
+  const ctaDiv  = document.createElement('div');
+  ctaDiv.className = 'cta-block';
+  ctaDiv.innerHTML = `
+    <div class="cta-block-header">
+      <p class="cta-block-eyebrow">Siguiente paso</p>
+      <p class="cta-block-title">${name}, tus <span>macros exactos</span> te esperan</p>
+      <p class="cta-block-sub">Esta guía es el punto de partida. Con una asesoría de StrengthLab recibís tus macros exactos, plan de entrenamiento y seguimiento semanal.</p>
+    </div>
+    <div class="cta-options">
+      <a class="cta-option primary"
+         href="https://wa.me/TUNUMERODEWHATSAPP?text=Hola%20Renzo%2C%20completé%20el%20Método%20StrengthLab%20%28${encodeURIComponent(stage)}%29%20y%20quiero%20conocer%20más%20sobre%20la%20asesoría."
+         target="_blank" rel="noopener">
+        <div class="cta-option-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+          </svg>
+        </div>
+        <div class="cta-option-main">
+          <p class="cta-option-label">Hablar con Renzo por WhatsApp</p>
+          <p class="cta-option-sub">Respuesta en menos de 24hs — asesoría personalizada</p>
+        </div>
+        <div class="cta-option-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+      </a>
+      <a class="cta-option"
+         href="https://www.instagram.com/reennzolifts"
+         target="_blank" rel="noopener">
+        <div class="cta-option-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div class="cta-option-main">
+          <p class="cta-option-label">Seguir a Renzo en Instagram</p>
+          <p class="cta-option-sub">Contenido diario de nutrición y entrenamiento</p>
+        </div>
+        <div class="cta-option-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
+        </div>
+      </a>
+    </div>
+  `;
+  body.appendChild(ctaDiv);
+
+  // COMPARTIR
+  const shareDiv = document.createElement('div');
+  shareDiv.className = 'share-block';
+  shareDiv.innerHTML = `
+    <p class="share-title">Compartí tu resultado</p>
+    <div class="share-btns">
+      <button class="share-btn" onclick="shareWhatsApp()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+        </svg>
+        WhatsApp
+      </button>
+      <button class="share-btn" onclick="shareNative()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+        </svg>
+        Compartir
+      </button>
+      <button class="share-btn" onclick="copyLink()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+        </svg>
+        Copiar link
+      </button>
+    </div>
+  `;
+  body.appendChild(shareDiv);
+
+  // Restart
+  const restartDiv = document.createElement('div');
+  restartDiv.className = 'restart-wrap';
+  restartDiv.innerHTML = `
+    <button class="btn-restart" onclick="restart()">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <polyline points="1 4 1 10 7 10"/>
+        <path d="M3.51 15a9 9 0 1 0 .49-4.95"/>
+      </svg>
+      <span>Nuevo perfil</span>
+    </button>
+  `;
+  body.appendChild(restartDiv);
+}
+
+/* ═══════════════════════
+   COMPARTIR FUNCIONES
+═══════════════════════ */
+function getShareText(){
+  const stage = { definicion:'Definición', volumen:'Volumen', mantencion:'Mantención' }[ans.goal] || 'Personalizado';
+  return `Acabo de recibir mi guía de nutrición personalizada de StrengthLab — Etapa ${stage}. ¿La querés? 👇\n${window.location.href}`;
+}
+
+function shareWhatsApp(){
+  const text = getShareText();
+  window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+}
+
+async function shareNative(){
+  const stage = { definicion:'Definición', volumen:'Volumen', mantencion:'Mantención' }[ans.goal] || '';
+  const data = {
+    title: `Mi guía StrengthLab — ${stage}`,
+    text:  getShareText(),
+    url:   window.location.href,
+  };
+  if(navigator.share){
+    try { await navigator.share(data); } catch(e){ copyLink(); }
+  } else {
+    copyLink();
+  }
+}
+
+function copyLink(){
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const toast = document.getElementById('copy-toast');
+    toast.classList.add('visible');
+    setTimeout(() => toast.classList.remove('visible'), 2200);
+  }).catch(() => {
+    // Fallback para navegadores sin clipboard API
+    const ta = document.createElement('textarea');
+    ta.value = window.location.href;
+    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy');
+    document.body.removeChild(ta);
+    const toast = document.getElementById('copy-toast');
+    toast.classList.add('visible');
+    setTimeout(() => toast.classList.remove('visible'), 2200);
+  });
+}
+
+/* ═══════════════════════
+   FETCH PLAN
+═══════════════════════ */
+async function fetchPlan(bio){
+  const gMap = {
+    definicion:'DEFINICIÓN — pérdida de grasa preservando masa muscular',
+    volumen:   'VOLUMEN — ganancia muscular limpia y de calidad',
+    mantencion:'MANTENCIÓN — optimización y sostenimiento de la composición corporal',
+  };
+  const rest      = (ans.restrictions || []).filter(v => v !== 'ninguna');
+  const restTxt   = rest.length ? rest.join(', ') : 'ninguna';
+  const actMap    = {
+    sedentario:'sedentario (poco o ningún ejercicio)',
+    moderado:  'moderadamente activo (2-3 sesiones/semana)',
+    activo:    'activo (4-5 sesiones/semana)',
+    muy_activo:'muy activo (6+ sesiones/semana o trabajo físico intenso)'
+  };
+  const budgetMap = {
+    economico:'ajustado (prioriza opciones económicas y accesibles)',
+    moderado: 'moderado (puedes invertir en variedad sin exagerar)',
+    alto:     'sin restricción (prioriza calidad sobre precio)'
+  };
+  const expMap = {
+    principiante:`principiante (menos de 1 año) — su cuerpo responde muy bien a cualquier estímulo`,
+    intermedio:  `intermedio (1-3 años) — ya tiene base, necesita precisión y progresión`,
+    avanzado:    `avanzado (más de 3 años) — optimización fina, márgenes de mejora más pequeños`
+  };
+  const imc = (parseFloat(bio.weight) / Math.pow(parseFloat(bio.height)/100, 2)).toFixed(1);
+
+  const prompt = `Eres el nutricionista deportivo de élite del programa StrengthLab, creado por Renzo Bello. Hablas directamente con ${ans.name} — usa su nombre constantemente a lo largo de la guía. Tu comunicación es refinada, directa, sin rodeos y de alto valor percibido. Hablas como un experto de primer nivel que conoce a esta persona en profundidad.
+
+PERFIL EXACTO DE ${ans.name.toUpperCase()}:
+- Objetivo: ${gMap[ans.goal] || ans.goal}
+- Edad: ${bio.age} años | Peso: ${bio.weight} kg | Altura: ${bio.height} cm | IMC: ${imc}
+- Sexo biológico: ${ans.sex === 'hombre' ? 'masculino' : 'femenino'}
+- Nivel de actividad: ${actMap[ans.activity] || ans.activity}
+- Experiencia de entrenamiento: ${expMap[ans.experience] || ans.experience}
+- Porcentaje de grasa corporal estimado: ${{muy_bajo:'Muy bajo (<12% H/<20% M)',bajo:'Bajo (12-17% H/20-25% M)',moderado:'Moderado (18-24% H/26-32% M)',alto:'Alto (>25% H/>33% M)'}[ans.bodyfat]||'no especificado'}
+- Tipo de entrenamiento: ${(ans.training_type||[]).map(v=>({pesas:'Pesas/fuerza',cardio:'Cardio/aeróbico',crossfit:'CrossFit/funcional',deportes:'Deportes de equipo',mixto:'Mixto'}[v]||v)).join(', ')||'no especificado'}
+- Restricciones alimentarias: ${restTxt}
+- Presupuesto alimentario: ${budgetMap[ans.budget] || ans.budget}
+- MACROS CALCULADOS (ya se muestran visualmente al usuario — NO los repitas en el texto):
+  Calorías: ${calcMacros(bio).kcal} kcal | Proteína: ${calcMacros(bio).prot}g | Carbos: ${calcMacros(bio).carbs}g | Grasas: ${calcMacros(bio).fat}g
+
+INSTRUCCIÓN CRÍTICA: Los macros YA se muestran visualmente en un bloque separado. NO los repitas en el cuerpo del texto. En cambio, SÍ podés hacer referencias cualitativas al timing y distribución de macros (ej: "priorizá proteína en el desayuno", "consumí carbohidratos antes del entrenamiento") integrando los números exactos cuando sume al argumento.
+
+REGLAS DE REDACCIÓN:
+- Usa el nombre "${ans.name}" AL MENOS 2 veces por sección
+- Referencia sus datos cuando sea relevante
+- NO uses asteriscos ni markdown estándar (sin **negrita**, sin # títulos)
+- Los títulos van entre [SEC]TÍTULO[/SEC]
+- Las palabras o conceptos clave de alto impacto van entre [KW]texto[/KW]
+- Los números, tiempos, cantidades y datos concretos van entre [GD]datos[/GD]
+- Las listas van con "- " al inicio de cada ítem
+- Tono: asesor de élite, directo, sin paja, con criterio
+
+Redacta con EXACTAMENTE estos apartados en este orden:
+
+[SEC]TU PUNTO DE PARTIDA, ${ans.name.toUpperCase()}[/SEC]
+Habla directamente sobre lo que su perfil específico revela. [GD]3-4 líneas[/GD], motivador y preciso.
+
+[SEC]ALIMENTOS PRIORITARIOS PARA TU ETAPA[/SEC]
+Los [GD]8[/GD] alimentos más estratégicos para ${ans.name} en etapa de ${ans.goal}. Cada ítem: nombre + razón concreta. Adaptado a presupuesto ${ans.budget}. Respetar restricciones: ${restTxt}.
+
+[SEC]LO QUE DEBES MODERAR[/SEC]
+[GD]5[/GD] alimentos o hábitos que ${ans.name} debe reducir. Sin demonizar — razón estratégica específica. Directo.
+
+[SEC]TU DÍA ALIMENTARIO IDEAL[/SEC]
+Desayuno, Media mañana, Almuerzo, Merienda/Once, Cena. Opciones concretas con porciones orientativas. Adaptado a restricciones (${restTxt}) y presupuesto ${ans.budget}.
+
+[SEC]2 RECETAS RÁPIDAS PARA ${ans.name.toUpperCase()}[/SEC]
+Dos recetas nombradas con estilo, en máximo [GD]5[/GD] pasos. Indicar tiempo de preparación.
+
+[SEC]LISTA DE COMPRAS SEMANAL[/SEC]
+[GD]12[/GD] productos esenciales organizados por categoría: Proteínas / Vegetales / Carbohidratos / Esenciales varios. Ajustado al presupuesto ${ans.budget}.
+
+[SEC]5 ESTRATEGIAS DE ADHERENCIA[/SEC]
+Los [GD]5[/GD] hacks más efectivos para que ${ans.name} se mantenga en el plan. Práctico y sin vueltas.
+
+[SEC]ERRORES CRÍTICOS A EVITAR[/SEC]
+Los [GD]4[/GD] errores más comunes en etapa de ${ans.goal} con nivel ${ans.experience}. Directo, sin suavizar.
+
+Extensión total: entre 900 y 1200 palabras. No uses emojis. No pongas texto fuera de las secciones definidas.`;
+
+  try {
+    const resp = await fetch('/api/plan', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model:      'claude-sonnet-4-6',
+        max_tokens: 2000,
+        messages:   [{ role: 'user', content: prompt }]
+      })
+    });
+    if(!resp.ok){
+      const errData = await resp.json().catch(() => ({}));
+      throw new Error(errData?.error || `HTTP ${resp.status}`);
+    }
+    const data = await resp.json();
+    const text = data.content.filter(b => b.type === 'text').map(b => b.text).join('');
+    return { text };
+  } catch(e) {
+    return { error: `No se pudo generar el plan: ${e.message}. Recargá e intentá de nuevo.` };
+  }
+}
+
+/* ═══════════════════════
+   PARSE SECTIONS
+═══════════════════════ */
+function parseSections(rawText){
+  const sections = [];
+  const parts = rawText.split(/\[SEC\](.*?)\[\/SEC\]/s);
+  for(let i = 1; i < parts.length; i += 2){
+    const title   = parts[i].trim();
+    const content = (parts[i+1] || '').trim();
+    if(title) sections.push({ title, content });
+  }
+  return sections;
+}
+
+/* ═══════════════════════
+   RENDER SECTION CONTENT
+═══════════════════════ */
+function renderSectionContent(raw){
+  let t = raw;
+  t = t.replace(/\[KW\]([\s\S]*?)\[\/KW\]/g,  (_, kw) => `@@KW@@${kw}@@ENDKW@@`);
+  t = t.replace(/\[GD\]([\s\S]*?)\[\/GD\]/g,  (_, gd) => `@@GD@@${gd}@@ENDGD@@`);
+  t = t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  t = t.replace(/@@KW@@([\s\S]*?)@@ENDKW@@/g, (_, kw) => `<span class="kw">${kw}</span>`);
+  t = t.replace(/@@GD@@([\s\S]*?)@@ENDGD@@/g, (_, gd) => `<span class="gd">${gd}</span>`);
+
+  const lines = t.split('\n');
+  let html = '', inPara = false, listItems = [];
+
+  function flushPara(){ if(inPara){ html += '</p>'; inPara = false; } }
+  function flushList(){
+    if(listItems.length){
+      html += '<ul class="sec-list">';
+      listItems.forEach(item => {
+        html += `<li class="sec-list-item">
+          <span class="sec-list-marker">—</span>
+          <span class="sec-list-text">${item}</span>
+        </li>`;
+      });
+      html += '</ul>';
+      listItems = [];
+    }
+  }
+
+  for(const raw of lines){
+    const ln = raw.trim();
+    if(!ln){ flushPara(); flushList(); continue; }
+    const listMatch = ln.match(/^-\s+(.+)/);
+    if(listMatch){ flushPara(); listItems.push(listMatch[1]); continue; }
+    flushList();
+    if(!inPara){ html += '<p>'; inPara = true; } else { html += ' '; }
+    html += ln;
+  }
+  flushPara();
+  flushList();
+  return html;
+}
+
+/* ═══════════════════════
+   RESTART
+═══════════════════════ */
+function restart(){
+  ans = {}; multi = []; cur = 0;
+  document.getElementById('results').style.display  = 'none';
+  document.getElementById('res-body').innerHTML     = '';
+  document.getElementById('wm-fixed').style.display = 'none';
+  document.getElementById('landing').style.display  = 'block';
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
